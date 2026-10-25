@@ -1,0 +1,15 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+  - repo: https://github.com/sqlfluff/sqlfluff
+    rev: 4.3.0
+    hooks:
+      - id: sqlfluff-lint
+        args: ["--config", ".sqlfluff"]
+        additional_dependencies:
+          - dbt-postgres==1.11.0
+          - sqlfluff-templater-dbt==4.3.0

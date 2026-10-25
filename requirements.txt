@@ -1,0 +1,5 @@
+dbt-postgres==1.11.0
+sqlfluff==4.3.0
+sqlfluff-templater-dbt==4.3.0
+pytest==8.4.2
+pre-commit==4.3.0
